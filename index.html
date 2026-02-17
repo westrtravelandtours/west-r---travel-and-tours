@@ -152,89 +152,295 @@ footer {
         <a href="#" onclick="openSignup()">Sign Up</a>
     </nav>
 </header>
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<section id="home" class="home">
-    <h2>Explore The World With Us</h2>
-    <p>Your trusted partner in travel and adventure.</p>
-    <button class="btn" onclick="scrollToBooking()">Book Now</button>
-</section>
-
-<section id="offers">
-    <h2>Our Offers</h2>
-    <div class="offers-container">
-        <div class="offer-card">
-            <h3>Singapore</h3>
-            <p>As Low as $57</p>
-        </div>
-        <div class="offer-card">
-            <h3>Taipei</h3>
-            <p>As Low as $127</p>
-        </div>
-        <div class="offer-card">
-            <h3>Los Angeles</h3>
-            <p>As Low as $404</p>
-            
-        </div>
-              <div class="offer-card">
-            <h3>Istanbul</h3>
-            <p>As Low as $808</p>
-            
-        </div>
-              <div class="offer-card">
-            <h3>Tokyo</h3>
-            <p>As Low as $362</p>
-            
-        </div>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Explore the World With Confidence</h1>
+      <p>Your trusted partner in travel, tours, and unforgettable adventures.</p>
+      <button class="primary-btn" onclick="scrollToBooking()">Book Your Trip</button>
     </div>
+  </div>
 </section>
-    <section id="service">
-    <h2>Our Service</h2>
-    <div class="offers-container">
-        <div class="offer-card">
-            <h3> Domestic & International Ticketing 
-            </h3>
-        </div>
-        <div class="offer-card">
-            <h3>Domestic & International Packages</h3>
-        </div>
-        <div class="offer-card">
-            <h3>Hotel Accommodation & Transfers</h3>
-        </div>
+
+<!-- OFFERS SECTION -->
+<section id="offers" class="section">
+  <h2 class="section-title">Featured Destinations</h2>
+  <div class="card-container">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1508962914676-134849a727f0" alt="Singapore">
+      <div class="card-content">
+        <h3>Singapore</h3>
+        <p class="price">From $57</p>
+      </div>
     </div>
-        <div class="offer-card">
-            <h3> Visa Assistance</h3>
-        </div>
-          </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1553603227-2358aabe821e" alt="Taipei">
+      <div class="card-content">
+        <h3>Taipei</h3>
+        <p class="price">From $127</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Los Angeles">
+      <div class="card-content">
+        <h3>Los Angeles</h3>
+        <p class="price">From $404</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200" alt="Istanbul">
+      <div class="card-content">
+        <h3>Istanbul</h3>
+        <p class="price">From $808</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549693578-d683be217e58" alt="Tokyo">
+      <div class="card-content">
+        <h3>Tokyo</h3>
+        <p class="price">From $362</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="booking">
-    <h2>Book Your Trip</h2>
-    <form onsubmit="return confirmBooking()">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <select required>
-            <option value="">Select Package</option>
-            <option>Beach Getaway</option>
-            <option>City Tour Package</option>
-            <option>Adventure Trip</option>
-        </select>
-        <input type="date" required>
-        <button class="btn" type="submit">Confirm Booking</button>
-    </form>
+<!-- SERVICES SECTION -->
+<section id="service" class="section light-bg">
+  <h2 class="section-title">Our Services</h2>
+  <div class="card-container">
+
+    <div class="service-card">
+      ✈ Domestic & International Ticketing
+    </div>
+
+    <div class="service-card">
+      🌍 Travel Packages (Local & International)
+    </div>
+
+    <div class="service-card">
+      🏨 Hotel Accommodation & Transfers
+    </div>
+
+    <div class="service-card">
+      🛂 Visa Assistance
+    </div>
+
+  </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: westrtravel@gmail.com</p>
-    <p>Phone: 0917 854 7992 </p>
-    <p>Address: Tuktukan, Taguig City</p>
+<!-- BOOKING SECTION -->
+<section id="booking" class="section booking-bg">
+  <h2 class="section-title">Book Your Trip</h2>
+  <form class="booking-form" onsubmit="return confirmBooking()">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <select required>
+      <option value="">Select Package</option>
+      <option>Beach Getaway</option>
+      <option>City Tour Package</option>
+      <option>Adventure Trip</option>
+    </select>
+    <input type="date" required>
+    <button class="primary-btn" type="submit">Confirm Booking</button>
+  </form>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section dark-bg">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> westrtravel@gmail.com</p>
+    <p><strong>Phone:</strong> 0917 854 7992</p>
+    <p><strong>Address:</strong> Tuktukan, Taguig City</p>
     <p>
-  Facebook linked:
-  <a href="https://www.facebook.com/people/West-R-Travel-and-Tours/100086925575111/" target="_blank" rel="noopener noreferrer">
-    West R Travel and Tours
-  </a>
-</p>
+      <strong>Facebook:</strong>
+      <a href="https://www.facebook.com/people/West-R-Travel-and-Tours/100086925575111/" target="_blank">
+        West R Travel and Tours
+      </a>
+    </p>
+  </div>
 </section>
+
+<!-- PROFESSIONAL CSS -->
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 20px 0 30px;
+}
+
+/* BUTTON */
+.primary-btn {
+  background: linear-gradient(45deg,#007BFF,#00c3ff);
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+/* CARDS */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  transition: 0.4s;
+  background: white;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.price {
+  color: #007BFF;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* SERVICES */
+.light-bg {
+  background: #f8f9fa;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* BOOKING */
+.booking-bg {
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1491553895911-0055eca6402d') center/cover no-repeat;
+  color: white;
+}
+
+.booking-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+/* CONTACT */
+.dark-bg {
+  background: #1f2933;
+  color: white;
+}
+
+.dark-bg a {
+  color: #00c3ff;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:32px;
+  }
+}
+</style>
+
+
 
 <footer>
     <p>© 2026 West R Travel and Tours | All Rights Reserved</p>
@@ -295,8 +501,6 @@ window.onclick = function(event) {
 </body>
 
 </html>
-
-
 
 
 
