@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West R Travel and Tours</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+header {
+    background: #0b3d91;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 60px 50px;
+}
+
+.home {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.home h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
+.offers-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+form {
+    background: white;
+    padding: 20px;
+    max-width: 500px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>West R Travel & Tours</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#offers">Offers</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+        <a href="#" onclick="openLogin()">Login</a>
+        <a href="#" onclick="openSignup()">Sign Up</a>
+    </nav>
+</header>
+
+<section id="home" class="home">
+    <h2>Explore The World With Us</h2>
+    <p>Your trusted partner in travel and adventure.</p>
+    <button class="btn" onclick="scrollToBooking()">Book Now</button>
+</section>
+
+<section id="offers">
+    <h2>Special Offers</h2>
+    <div class="offers-container">
+        <div class="offer-card">
+            <h3>Beach Getaway</h3>
+            <p>3 Days & 2 Nights</p>
+            <p>Starting at $299</p>
+        </div>
+        <div class="offer-card">
+            <h3>City Tour Package</h3>
+            <p>5 Days City Experience</p>
+            <p>Starting at $499</p>
+        </div>
+        <div class="offer-card">
+            <h3>Adventure Trip</h3>
+            <p>Mountain & Hiking Tour</p>
+            <p>Starting at $399</p>
+        </div>
+    </div>
+</section>
+
+<section id="booking">
+    <h2>Book Your Trip</h2>
+    <form onsubmit="return confirmBooking()">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <select required>
+            <option value="">Select Package</option>
+            <option>Beach Getaway</option>
+            <option>City Tour Package</option>
+            <option>Adventure Trip</option>
+        </select>
+        <input type="date" required>
+        <button class="btn" type="submit">Confirm Booking</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@westrtravel.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>Address: 123 Travel Street, Your City</p>
+</section>
+
+<footer>
+    <p>© 2026 West R Travel and Tours | All Rights Reserved</p>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h3>Login</h3>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="btn">Login</button>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+        <h3>Sign Up</h3>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="btn">Create Account</button>
+    </div>
+</div>
+
+<script>
+function scrollToBooking() {
+    document.getElementById("booking").scrollIntoView({behavior: "smooth"});
+}
+
+function confirmBooking() {
+    alert("Booking submitted successfully! We will contact you soon.");
+    return false;
+}
+
+function openLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+function openSignup() {
+    document.getElementById("signupModal").style.display = "flex";
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
